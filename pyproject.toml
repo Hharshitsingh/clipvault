@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clipvault"
+version = "1.0.0"
+description = "Windows 11–style clipboard history for Linux (GNOME / Wayland)"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Harshit Singh", email = "hharshitsingh@users.noreply.github.com" }]
+requires-python = ">=3.10"
+keywords = ["clipboard", "gnome", "wayland", "gtk", "history"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Topic :: Desktop Environment",
+  "Topic :: Utilities",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/Hharshitsingh/clipvault"
+Issues = "https://github.com/Hharshitsingh/clipvault/issues"
+Release = "https://github.com/Hharshitsingh/clipvault/releases"
+
+[project.scripts]
+clipvault = "clipvault.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["clipvault*"]
+
+[tool.setuptools.package-data]
+clipvault = ["style.css", "icons/*.svg"]

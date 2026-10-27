@@ -1,0 +1,139 @@
+/* Theme-aware flyout — follows system light / dark */
+
+window.clipboard-window {
+  background: transparent;
+}
+
+.clipboard-frame {
+  background: alpha(@window_bg_color, 0.96);
+  border: 1px solid alpha(@borders, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 16px 48px alpha(#000000, 0.35);
+  padding: 0;
+}
+
+.clipboard-header {
+  padding: 14px 16px 10px 16px;
+}
+
+.clipboard-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: @window_fg_color;
+  letter-spacing: 0.2px;
+}
+
+.clipboard-subtitle {
+  font-size: 11px;
+  color: alpha(@window_fg_color, 0.5);
+  margin-top: 2px;
+}
+
+.search-entry {
+  margin: 0 12px 10px 12px;
+  border-radius: 8px;
+  background: alpha(@window_fg_color, 0.06);
+  color: @window_fg_color;
+  padding: 6px 10px;
+  border: 1px solid alpha(@borders, 0.7);
+}
+
+.search-entry:focus {
+  border-color: @accent_color;
+  box-shadow: 0 0 0 1px alpha(@accent_color, 0.35);
+}
+
+.clip-list {
+  padding: 0 8px 8px 8px;
+  background: transparent;
+}
+
+.clip-row {
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin: 2px 0;
+  background: alpha(@window_fg_color, 0.04);
+  border: 1px solid transparent;
+}
+
+.clip-row:hover {
+  background: alpha(@window_fg_color, 0.09);
+}
+
+.clip-row:selected,
+.clip-row.selected {
+  background: alpha(@accent_bg_color, 0.35);
+  border-color: alpha(@accent_color, 0.45);
+}
+
+.clip-preview {
+  font-size: 13px;
+  color: @window_fg_color;
+  line-height: 1.35;
+}
+
+.clip-meta {
+  font-size: 10px;
+  color: alpha(@window_fg_color, 0.45);
+  margin-top: 4px;
+}
+
+.clip-thumb {
+  border-radius: 8px;
+  background: alpha(@window_fg_color, 0.06);
+  min-width: 120px;
+  min-height: 72px;
+}
+
+.icon-btn {
+  padding: 4px;
+  border-radius: 6px;
+  min-width: 28px;
+  min-height: 28px;
+  background: transparent;
+  border: none;
+  color: alpha(@window_fg_color, 0.55);
+}
+
+.icon-btn:hover {
+  background: alpha(@window_fg_color, 0.1);
+  color: @window_fg_color;
+}
+
+.icon-btn.pinned {
+  color: @accent_color;
+}
+
+.footer-bar {
+  padding: 8px 12px 12px 12px;
+  border-top: 1px solid alpha(@borders, 0.7);
+}
+
+.footer-btn {
+  border-radius: 6px;
+  padding: 6px 10px;
+  background: alpha(@window_fg_color, 0.07);
+  color: @window_fg_color;
+  border: none;
+  font-size: 12px;
+}
+
+.footer-btn:hover {
+  background: alpha(@window_fg_color, 0.12);
+}
+
+.footer-btn.destructive:hover {
+  background: alpha(@error_color, 0.2);
+  color: @error_color;
+}
+
+.empty-state {
+  padding: 36px 24px;
+  color: alpha(@window_fg_color, 0.45);
+  font-size: 13px;
+}
+
+.hint-label {
+  font-size: 11px;
+  color: alpha(@window_fg_color, 0.4);
+}
